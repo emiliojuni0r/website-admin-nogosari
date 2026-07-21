@@ -36,10 +36,10 @@ const fetchDashboardData = async () => {
     try {
         // Jalankan semua request secara paralel agar lebih cepat
         const [resArtikel, resPotensi, resPenduduk, resPerangkat] = await Promise.all([
-            api.get('/articles?limit=5'), // Ambil sekalian 5 data terbaru
+            api.get('/artikel?limit=5'), // Ambil sekalian 5 data terbaru
             api.get('/potensi?limit=1'),  // Cukup limit 1 karena kita cuma butuh totalData-nya
             api.get('/kependudukan'),     // Ambil summary kependudukan
-            api.get('/profil/perangkat')  // Ambil daftar perangkat
+            api.get('/profildesa/perangkat')  // Ambil daftar perangkat
         ])
 
         // Masukkan data ke state statistik
@@ -192,7 +192,7 @@ onMounted(() => {
                     <div class="bg-white p-6 rounded-lg shadow h-full">
                         <div class="flex justify-between items-center mb-4 border-b pb-2">
                             <h3 class="text-lg font-bold">5 Berita / Artikel Terakhir</h3>
-                            <button @click="router.push({ name: 'kelola-berita' })"
+                            <button @click="router.push({ name: 'artikel' })"
                                 class="text-sm text-blue-600 hover:underline">Lihat Semua</button>
                         </div>
 

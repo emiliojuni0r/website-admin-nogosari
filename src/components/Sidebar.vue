@@ -24,6 +24,26 @@ const router = useRouter()
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Carousel
             </router-link>
+            <router-link to="/sambutan" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Sambutan
+            </router-link>
+            <router-link to="/profildesa" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Profil Desa
+            </router-link>
+            <router-link to="/perangkatdesa" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Perangkat Desa
+            </router-link>
+            <router-link to="/kependudukan" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Kependudukan
+            </router-link>
+            <router-link to="/pemetaan" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Pemetaan
+            </router-link>
             <router-link to="/artikel" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Artikel
@@ -36,30 +56,9 @@ const router = useRouter()
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Potensi Desa
             </router-link>
-
-            <router-link to="/sambutan" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
-                active-class="bg-blue-600 hover:bg-blue-600">
-                Sambutan
-            </router-link>
             <router-link to="/footer" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Footer
-            </router-link>
-            <router-link to="/kependudukan" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
-                active-class="bg-blue-600 hover:bg-blue-600">
-                Kependudukan
-            </router-link>
-            <router-link to="/profildesa" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
-                active-class="bg-blue-600 hover:bg-blue-600">
-                Profil Desa
-            </router-link>
-            <router-link to="/perangkatdesa" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
-                active-class="bg-blue-600 hover:bg-blue-600">
-                Perangkat Desa
-            </router-link>
-            <router-link to="/pemetaan" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
-                active-class="bg-blue-600 hover:bg-blue-600">
-                Pemetaan
             </router-link>
             <!-- Tambahkan menu lain di sini -->
         </nav>

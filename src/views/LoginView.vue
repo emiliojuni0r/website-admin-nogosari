@@ -33,9 +33,11 @@ const handleLogin = async () => {
 <template>
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
         <div class="w-full max-w-md rounded-xl bg-white p-8 shadow-lg">
-            <h1 class="mb-6 text-center text-3xl font-bold text-gray-800">
+            <h1 class="mb-3 text-center text-3xl font-bold text-gray-800">
                 Login Admin
             </h1>
+
+            <img src="/logo/logo_bondowoso.png" alt="logo bondowoso" class="mx-auto w-14">
 
             <form @submit.prevent="handleLogin" class="space-y-5">
                 <div>

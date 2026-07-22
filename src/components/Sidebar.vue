@@ -60,6 +60,10 @@ const router = useRouter()
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Footer
             </router-link>
+            <router-link to="/user" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Kelola Akun
+            </router-link>
             <!-- Tambahkan menu lain di sini -->
         </nav>
 

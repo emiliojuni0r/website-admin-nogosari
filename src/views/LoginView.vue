@@ -18,9 +18,14 @@ const handleLogin = async () => {
             password: password.value
         })
 
+        console.log(response)
+
         const { token, admin } = response.data
 
         authStore.setAuth({ token, admin })
+
+        console.log(authStore.admin)
+        console.log(admin?.username)
 
         router.push({ name: 'dashboard' })
     } catch (error) {

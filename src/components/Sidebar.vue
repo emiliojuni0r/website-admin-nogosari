@@ -70,7 +70,7 @@ const router = useRouter()
         <!-- Bagian Bawah Sidebar (Admin Info) -->
         <div class="p-4 border-t border-gray-700">
             <p class="text-sm text-gray-400 mb-2">Login sebagai:</p>
-            <p class="font-semibold">{{ useAuthStore.admin?.username || 'Admin' }}</p>
+            <p class="font-semibold">{{ authStore.admin?.username || 'Admin' }}</p>
         </div>
     </aside>
 </template>

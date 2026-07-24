@@ -99,6 +99,11 @@ const routes = [
         path: 'pemetaan/form-peta/:id?',
         name: 'form-peta',
         component: () => import('@/views/pemetaan/FormPetaView.vue'),
+      },
+      {
+        path: 'user',
+        name: 'user',
+        component: () => import('@/views/user/UserView.vue'),
       }
     ]
   }

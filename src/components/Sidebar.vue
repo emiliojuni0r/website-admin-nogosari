@@ -60,13 +60,17 @@ const router = useRouter()
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Footer
             </router-link>
+            <router-link to="/user" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Kelola Akun
+            </router-link>
             <!-- Tambahkan menu lain di sini -->
         </nav>
 
         <!-- Bagian Bawah Sidebar (Admin Info) -->
         <div class="p-4 border-t border-gray-700">
             <p class="text-sm text-gray-400 mb-2">Login sebagai:</p>
-            <p class="font-semibold">{{ useAuthStore.admin?.username || 'Admin' }}</p>
+            <p class="font-semibold">{{ authStore.admin?.username || 'Admin' }}</p>
         </div>
     </aside>
 </template>

@@ -18,9 +18,14 @@ const handleLogin = async () => {
             password: password.value
         })
 
+        console.log(response)
+
         const { token, admin } = response.data
 
         authStore.setAuth({ token, admin })
+
+        console.log(authStore.admin)
+        console.log(admin?.username)
 
         router.push({ name: 'dashboard' })
     } catch (error) {
@@ -32,7 +37,7 @@ const handleLogin = async () => {
 
 <template>
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
-        <div class="w-full max-w-md rounded-xl bg-white p-8 shadow-lg">
+        <div class="w-full max-w-md rounded-xl bg-white p-8 shadow-lg relative">
             <h1 class="mb-3 text-center text-3xl font-bold text-gray-800">
                 Login Admin
             </h1>
@@ -56,7 +61,8 @@ const handleLogin = async () => {
                         class="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
 
-                <p v-if="errorMessage" class="rounded-lg bg-red-100 p-3 text-sm text-red-600">
+                <p v-if="errorMessage"
+                    class="absolute -bottom-20 left-1/2 -translate-x-1/2 rounded-lg bg-red-100 px-4 py-3 text-sm text-red-600 whitespace-nowrap">
                     {{ errorMessage }}
                 </p>
 

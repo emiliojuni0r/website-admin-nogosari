@@ -110,6 +110,30 @@ const chartOptionsPendidikan = {
     }
 }
 
+const chartOptionsRT = {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            display: false
+        }
+    },
+    scales: {
+        x: {
+            beginAtZero: true,
+            grid: {
+                color: 'rgba(0,0,0,0.05)'
+            }
+        },
+        y: {
+            grid: {
+                display: false
+            }
+        }
+    }
+}
+
 onMounted(() => {
     fetchDataKependudukan()
 })
@@ -124,7 +148,7 @@ onMounted(() => {
 
             <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded text-blue-700 text-sm mb-6">
                 <p><strong>Cara Update Data:</strong> Unggah file Excel (.xlsx) yang diekspor dari sistem pencatatan
-                    desa. Pastikan terdapat sheet bernama <strong>"DATA FIX"</strong> dan <strong>"(1) REKAP"</strong>
+                    desa. Pastikan terdapat sheet bernama <strong>"DATA FIX"</strong>
                     sesuai dengan format standar.</p>
             </div>
 
@@ -161,6 +185,17 @@ onMounted(() => {
                     </div>
                 </div>
 
+                <!-- Chart RT (Full Width) -->
+                <div class="col-span-1 md:col-span-2 border rounded-lg p-4 bg-gray-50">
+                    <h4 class="text-center font-bold mb-4 text-gray-700">
+                        Sebaran Penduduk per RT
+                    </h4>
+
+                    <div class="h-[600px]">
+                        <Bar :data="charts.chartDataRT" :options="chartOptionsRT" />
+                    </div>
+                </div>
+
                 <!-- Chart Dusun -->
                 <div class="border rounded-lg p-4 bg-gray-50">
                     <h4 class="text-center font-bold mb-4 text-gray-700">Sebaran per Dusun</h4>
@@ -188,7 +223,7 @@ onMounted(() => {
                 <!-- Chart Pekerjaan (Full Width - Horizontal) -->
                 <div class="col-span-1 md:col-span-2 border rounded-lg p-4 bg-gray-50">
                     <h4 class="text-center font-bold mb-4 text-gray-700">Mata Pencaharian / Pekerjaan</h4>
-                    <div class="h-[350px]">
+                    <div class="h-[600px]">
                         <Bar :data="charts.chartDataPekerjaan" :options="chartOptionsPekerjaan" />
                     </div>
                 </div>

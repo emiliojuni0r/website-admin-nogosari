@@ -95,7 +95,7 @@ onMounted(() => {
                     <!-- Tampilkan foto lama / preview foto baru -->
                     <div v-if="imagePreview || existingImage"
                         class="w-32 h-32 shrink-0 border rounded-md overflow-hidden bg-gray-100">
-                        <img :src="imagePreview || existingImage" class="w-full h-full object-cover" />
+                        <img :src="imagePreview || existingImage" class="w-full h-full object-top object-cover" />
                     </div>
                     <div class="flex-1">
                         <input type="file" accept="image/*" @change="handleFileChange"

@@ -149,7 +149,11 @@ onMounted(() => {
             <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded text-blue-700 text-sm mb-6">
                 <p><strong>Cara Update Data:</strong> Unggah file Excel (.xlsx) yang diekspor dari sistem pencatatan
                     desa. Pastikan terdapat sheet bernama <strong>"DATA FIX"</strong>
-                    sesuai dengan format standar.</p>
+                    sesuai dengan format standar</p>
+                <p>
+                    dan pastikan file .xslx memiliki format kolom seperti berikut:
+                </p>
+                <img src="/example/format_anu.png" />
             </div>
 
             <form @submit.prevent="submitUpload" class="flex items-end gap-4 bg-gray-50 p-4 border rounded-md">

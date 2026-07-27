@@ -32,6 +32,10 @@ const router = useRouter()
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Profil Desa
             </router-link>
+            <router-link to="/apbdes" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
+                active-class="bg-blue-600 hover:bg-blue-600">
+                Laporan Keuangan
+            </router-link>
             <router-link to="/perangkatdesa" class="block px-4 py-2 rounded-md hover:bg-gray-700 transition"
                 active-class="bg-blue-600 hover:bg-blue-600">
                 Perangkat Desa

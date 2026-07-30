@@ -134,6 +134,27 @@ const chartOptionsRT = {
     }
 }
 
+const chartOptionsLahirMati = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: { display: false },
+        tooltip: {
+            callbacks: { label: (context) => ` ${context.raw} Jiwa` }
+        }
+    },
+    scales: {
+        x: {
+            grid: { display: false },
+            ticks: { color: '#05391E', font: { size: 14, weight: 'bold' } }
+        },
+        y: {
+            grid: { color: 'rgba(239, 235, 191, 0.1)' },
+            ticks: { color: '#05391E', font: { size: 14 } }
+        }
+    }
+};
+
 onMounted(() => {
     fetchDataKependudukan()
 })
@@ -229,6 +250,16 @@ onMounted(() => {
                     <h4 class="text-center font-bold mb-4 text-gray-700">Mata Pencaharian / Pekerjaan</h4>
                     <div class="h-[600px]">
                         <Bar :data="charts.chartDataPekerjaan" :options="chartOptionsPekerjaan" />
+                    </div>
+                </div>
+
+                <!-- Chart kematian/kelahiran (Full Width) -->
+                <div class="col-span-1 md:col-span-2 border rounded-lg p-4 bg-gray-50">
+                    <h4 class="text-center font-bold mb-4 text-gray-700">Statistik Kelahiran & Kematian</h4>
+                    <!-- Tinggi disesuaikan menjadi 400px agar batang grafik tidak terlalu kurus memanjang -->
+                    <div class="h-[400px]">
+                        <!-- TYPO DIPERBAIKI: Menggunakan chartDataLahirMati -->
+                        <Bar :data="charts.chartDataLahirMati" :options="chartOptionsLahirMati" />
                     </div>
                 </div>
 

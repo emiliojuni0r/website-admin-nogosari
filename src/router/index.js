@@ -109,6 +109,16 @@ const routes = [
         path: 'apbdes',
         name: 'apbdes',
         component: () => import('@/views/apbdes/ApbdesView.vue'),
+      },
+      {
+        path: 'regulasi',
+        name: 'regulasi',
+        component: () => import('@/views/regulasi/RegulasiView.vue'),
+      },
+      {
+        path: 'galeri',
+        name: 'galeri',
+        component: () => import('@/views/galeri/GaleriView.vue'),
       }
     ]
   }
